@@ -1,0 +1,38 @@
+WHEEL_UP      add volume 2
+WHEEL_DOWN    add volume -2
+UP    add volume 2
+DOWN  add volume -2
+AXIS_UP add volume 2
+AXIS_DOWN add volume -2
+Shift+RIGHT frame-step
+Shift+LEFT frame-back-step
+H seek -65
+h seek 65
+v cycle deband
+a cycle audio
+s cycle sub
+i cycle interpolation
+t script-message-to seek_to toggle-seeker
++ add audio-delay 0.010
+- add audio-delay -0.010
+F1 add sub-delay -0.1
+F2 add sub-delay +0.1 
+F4 cycle-values video-aspect-override "16:9" "4:3" "2.35:1" "-1"
+
+Meta+v  script-message-to Mac_Integration OpenFromClipboard
+TAB     script-message-to Mac_Integration ShowFinder
+Ctrl+f  script-message-to Mac_Integration ShowInFinder
+
+CTRL+1 no-osd change-list glsl-shaders set "~~/shaders/Anime4K_Clamp_Highlights.glsl;~~/shaders/Anime4K_Restore_CNN_M.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_M.glsl;~~/shaders/Anime4K_AutoDownscalePre_x2.glsl;~~/shaders/Anime4K_AutoDownscalePre_x4.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_S.glsl"; show-text "Anime4K: Mode A (Fast)"
+CTRL+2 no-osd change-list glsl-shaders set "~~/shaders/Anime4K_Clamp_Highlights.glsl;~~/shaders/Anime4K_Restore_CNN_Soft_M.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_M.glsl;~~/shaders/Anime4K_AutoDownscalePre_x2.glsl;~~/shaders/Anime4K_AutoDownscalePre_x4.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_S.glsl"; show-text "Anime4K: Mode B (Fast)"
+CTRL+3 no-osd change-list glsl-shaders set "~~/shaders/Anime4K_Clamp_Highlights.glsl;~~/shaders/Anime4K_Upscale_Denoise_CNN_x2_UL.glsl;~~/shaders/Anime4K_AutoDownscalePre_x2.glsl;~~/shaders/Anime4K_AutoDownscalePre_x4.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_L.glsl"; show-text "Anime4K: Mode C (HQ)"
+CTRL+4 no-osd change-list glsl-shaders set "~~/shaders/Anime4K_Clamp_Highlights.glsl;~~/shaders/Anime4K_Restore_CNN_M.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_M.glsl;~~/shaders/Anime4K_Restore_CNN_S.glsl;~~/shaders/Anime4K_AutoDownscalePre_x2.glsl;~~/shaders/Anime4K_AutoDownscalePre_x4.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_S.glsl"; show-text "Anime4K: Mode A+A (Fast)"
+CTRL+5 no-osd change-list glsl-shaders set "~~/shaders/Anime4K_Clamp_Highlights.glsl;~~/shaders/Anime4K_Restore_CNN_Soft_M.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_M.glsl;~~/shaders/Anime4K_AutoDownscalePre_x2.glsl;~~/shaders/Anime4K_AutoDownscalePre_x4.glsl;~~/shaders/Anime4K_Restore_CNN_Soft_S.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_S.glsl"; show-text "Anime4K: Mode B+B (Fast)"
+CTRL+6 no-osd change-list glsl-shaders set "~~/shaders/Anime4K_Clamp_Highlights.glsl;~~/shaders/Anime4K_Upscale_Denoise_CNN_x2_M.glsl;~~/shaders/Anime4K_AutoDownscalePre_x2.glsl;~~/shaders/Anime4K_AutoDownscalePre_x4.glsl;~~/shaders/Anime4K_Restore_CNN_S.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_S.glsl"; show-text "Anime4K: Mode C+A (Fast)"
+CTRL+7 no-osd change-list glsl-shaders set "~~/shaders/CAS.glsl;~~/shaders/FSR.glsl;~~/shaders/CAS-scaled.glsl"; show-text "FidelityFx: Mode FSR"
+CTRL+8 no-osd change-list glsl-shaders set "~~/shaders/CAS.glsl;~~/shaders/FSRCNNX_x2_16-0-4-1.glsl;~~/shaders/CAS.glsl;~~/shaders/SSimSuperRes.glsl;~~/shaders/CAS-scaled.glsl"; show-text "FSRCNN: Mode CAS + FSRCNNX"
+
+CTRL+0 no-osd change-list glsl-shaders clr ""; show-text "GLSL shaders cleared"
+
+
+¡ glsl-shader="~~/ACNet.glsl"
